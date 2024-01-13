@@ -1323,7 +1323,7 @@ XMLNode* XMLComment::ShallowClone( XMLDocument* doc ) const
     if ( !doc ) {
         doc = _document;
     }
-    XMLComment* comment = doc->NewComment( Value() );	/
+    XMLComment* comment = doc->NewComment( Value() );
     return comment;
 }
 
