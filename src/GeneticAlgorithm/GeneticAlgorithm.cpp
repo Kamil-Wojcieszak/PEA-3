@@ -200,17 +200,22 @@ int GeneticAlgorithm::start(bool crossing) {
             nextPopulation.push_back(permutation);
         }
 
-        // Update the current population with the selected individuals
-        for (auto &itr: population)
-            itr.clear();
+		// Update the current population with the selected individuals
+		for (auto &itr: population) {
+			itr.clear();
+		}
 
-        population.clear();
-        population = nextPopulation;
+
+		population.clear();
+		population = nextPopulation;
+
 
         for (auto &itr: nextPopulation)
             itr.clear();
 
         nextPopulation.clear();
+
+
 
         // Perform crossover between pairs of individuals
         for (int j = 0; j < (int) (crossRate * (float) populationSize); j += 2) {

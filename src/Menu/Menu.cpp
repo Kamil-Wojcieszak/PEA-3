@@ -8,15 +8,9 @@ using namespace std;
 void Menu::enable() {
     int select = 0;
 
-    time= 5;
-    population = 10;
-    mutations = 0.01;
-    crosses = 0.8;
-    graph.loadXML("ftv55.xml");
-
     while (true) {
         cout << "Czas : " << time << " s\n";
-        cout << "Wielkosc populacji początkowej: " << population << "\n";
+        cout << "Wielkosc populacji poczatkowej: " << population << "\n";
         cout << "Wspolczynnik mutacji: " << mutations << "\n";
         cout << "Wspolczynnik krzyzowan: " << crosses << "\n";
         cout << graph.getDescription();
